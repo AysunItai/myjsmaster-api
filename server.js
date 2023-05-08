@@ -1,8 +1,9 @@
 const express=require("express");
+const dotenv=require("dotenv")
 const mysql=require("mysql2");
 const cors=require("cors");
 
-
+dotenv.config()
 const app=express();
 app.use(cors());
 app.use(express.json())
@@ -42,8 +43,8 @@ app.post("/login",async (req,res)=>{
 
 
 
+const port = process.env.PORT || 3000
 
-
-app.listen(8081,()=>{
+app.listen(port,()=>{
     console.log("Server running on port 8081");
 })
