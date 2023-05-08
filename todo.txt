@@ -1,0 +1,9 @@
+1.initiate package.json
+2.download express
+3.create server and some end point
+4.create database connection
+5.protect your sensitive data by .envy,npm install dotenv
+6.database creation
+database name:myjsmaster
+registration table with;id,firstName,lastName,email,password
+https://www.youtube.com/watch?v=WfCJ3sHnLBM
