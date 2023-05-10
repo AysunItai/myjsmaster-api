@@ -8,16 +8,19 @@ const app=express();
 app.use(cors());
 app.use(express.json())
 const db=mysql.createPool({
-    host:"127.0.0.1",
-    user:"root",
-    password:"123456",
-    database:"myjsmaster_app"
+    host:"eu-cdbr-west-03.cleardb.net",
+    user:"b61ec8e5b928a0",
+    password:"0e55564a",
+    database:"heroku_88fea0cc921717e"
 }).promise();
 
-
+app.get("/signup",(req,res)=>{
+    res.send("Welcome to my app")
+})
 //signup , registers the user info to the database
 app.post("/signup",async (req,res)=>{
     const {name,email,password}=req.body;
+    console.log(req.body)
    
     const result=await db.query(`
   INSERT
